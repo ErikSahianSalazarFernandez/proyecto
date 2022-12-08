@@ -1,0 +1,78 @@
+<mat-card>
+    <h1>Agregar nuevo vuelo</h1>
+    <mat-card-content>
+      <div class="bootstrap-wrapper">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <form (ngSubmit)= "formSubmit()">
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Aeropuerto</mat-label>
+                <input
+                required
+                autofocus
+                type="text"
+                name="aeropuerto"
+                matInput
+                placeholder="Digite el nombre del aeropuerto"
+                [(ngModel)] = "ciudad.aeropuerto"
+                >
+              </mat-form-field>
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Destino</mat-label>
+                <input
+                required
+                autofocus
+                type="text"
+                name="estado"
+                matInput
+                placeholder="Digite el nombre del destino"
+                [(ngModel)] = "ciudad.estado"
+                >
+              </mat-form-field>
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Fecha</mat-label>
+                <input
+                required
+                autofocus
+                type="date"
+                name="fecha"
+                matInput
+                placeholder="Selecciona la fecha"
+                [(ngModel)] = "ciudad.fecha"
+                >
+              </mat-form-field>
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Pasajeros</mat-label>
+                <input
+                required
+                autofocus
+                type="number"
+                name="pasajeros"
+                matInput
+                placeholder="Selecciona los pasajeros"
+                [(ngModel)] = "ciudad.pasajeros"
+                >
+              </mat-form-field>
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Tipo de vuelo</mat-label>
+                <input
+                required
+                autofocus
+                type="text"
+                name="tipo_vuelo"
+                matInput
+                placeholder="Seleccione el tipo de vuelo"
+                [(ngModel)] = "ciudad.tipo_vuelo"
+                >
+              </mat-form-field>
+              
+              <div class="container text-center mt15">
+                <button mat-raised-button color="primary">Guardar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  

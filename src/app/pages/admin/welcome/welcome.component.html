@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-list>
+    <div mat-subheader>
+      Productos
+    </div>
+    <mat-list-item *ngFor = "let p of productos">
+      <mat-icon mat-list-icon>cities</mat-icon>
+      <div class="container">
+        <div mat-line>{{ p.aeropuerto }}</div>
+        <div mat-line>{{ p.estado }}</div>
+        <div mat-line>{{ p.fecha | date : 'dd/MM/YYYY'}}</div>
+        <div mat-line>{{ p.tipo_vuelo }}</div>
+        <div class="mt10">
+          <!-- <button [routerLink] = "'/admin/producto/'+p.productoId" mat-flat-button color="primary" class="ml20">Editar</button> -->
+          <button mat-flat-button color="warn" class="ml10" (click) = "eliminarProducto(p.productoId)">Eliminar</button>
+        </div>
+      </div>
+      
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+
+  <div class="container text-center mt20">
+    <button routerLink="/admin/add-producto" mat-raised-button color="warn">Agregar producto</button>
+  </div>
+</mat-card>
+ 

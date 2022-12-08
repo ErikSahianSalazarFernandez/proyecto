@@ -1,0 +1,66 @@
+<mat-card>
+    <h1>Agregar nuevo producto</h1>
+    <mat-card-content>
+      <div class="bootstrap-wrapper">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <form (ngSubmit)= "formSubmit()">
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Producto</mat-label>
+                <input
+                required
+                autofocus
+                type="text"
+                name="nombre"
+                matInput
+                placeholder="Digite el nombre del producto"
+                [(ngModel)] = "producto.nombre"
+                >
+              </mat-form-field>
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Precio</mat-label>
+                <input
+                required
+                autofocus
+                type="number"
+                name="precio"
+                matInput
+                placeholder="Digite el precio del producto"
+                [(ngModel)] = "producto.precio"
+                >
+              </mat-form-field>
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Cantidad</mat-label>
+                <input
+                required
+                autofocus
+                type="number"
+                name="cantidad"
+                matInput
+                placeholder="Digite la cantidad de productos"
+                [(ngModel)] = "producto.cantidad"
+                >
+              </mat-form-field>
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Pasajeros</mat-label>
+                <input
+                required
+                autofocus
+                type="number"
+                name="stock"
+                matInput
+                placeholder="Ingrese el stock"
+                [(ngModel)] = "producto.stock"
+                >
+              </mat-form-field>
+              
+              <div class="container text-center mt15">
+                <button mat-raised-button color="primary">Guardar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  

@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-list>
+      <div mat-subheader>
+        Todas mis vuelos
+      </div>
+      <mat-list-item *ngFor = "let c of ciudades">
+        <mat-icon mat-list-icon>cities</mat-icon>
+        <div class="container">
+          <div mat-line>{{ c.aeropuerto }}</div>
+          <div mat-line>{{ c.estado }}</div>
+          <div mat-line>{{ c.fecha | date : 'dd/MM/YYYY'}}</div>
+          <div mat-line>{{ c.tipo_vuelo }}</div>
+          <div class="mt10">
+            <button [routerLink] = "'/admin/ciudad/'+c.ciudadId" mat-flat-button color="primary" class="ml20">Actualizar</button>
+            <button mat-flat-button color="warn" class="ml10" (click) = "cancelarVuelo(c.ciudadId)">Eliminar</button>
+          </div>
+        </div>
+        
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  
+    <div class="container text-center mt20">
+      <button routerLink="/admin/add-ciudad" mat-raised-button color="primary">Agregar vuelo</button>
+    </div>
+  </mat-card>
+  
